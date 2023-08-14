@@ -1,0 +1,130 @@
+@import '../config.css';
+div#confirmPage{
+    padding-top: 10vh;
+    height:90vh;
+    background-color:var(--background1);
+    display: flex;
+    justify-content: center;
+}
+
+div#confirmPage table{
+    padding:1em;
+    background-color: white;
+    width:50%;
+}
+
+
+div#confirmPage table td{
+    padding:0.5em;
+    font-size:1vw;
+    font-weight: bold;
+    color:var(--primary);
+    font-family:Lucida Sans Unicode;
+    
+}
+
+
+
+
+
+div#confirmPage table td.values
+{
+    text-align: left;
+    font-weight: normal;
+    color:rgb(19, 19, 19);
+}
+
+div#confirmPage button#buynowbtn{ font-size: 1vw; letter-spacing:0.1em; box-sizing: content-box;  width:40%;  padding-top:0.5em; padding-bottom:0.5em; border:0px; border-radius:3px; background-image:linear-gradient(var(--primary),var(--medium)); color:white; font-family: Lucida Sans Unicode; font-weight: bold;    }
+div#confirmPage button#buynowbtn:active{  transform:perspective(100px) translateZ(-1px);  }
+@keyframes loadingRotating{ from{ transform:rotate(0deg);  }to{ transform:rotate(360deg); }  }
+div#confirmPage div#loadingbar svg{
+    font-size:1.5vw;
+    color:rgba(177, 36, 17, 0.877);
+    animation-name:loadingRotating;
+    animation-duration:2s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    
+    
+}
+
+
+
+div#SuccessDialog{
+    position:fixed;
+    width:20vw;
+    height:20vw;
+    padding:2em;
+    text-align: center;
+    background-color: transparent;
+    display:none;
+}
+@keyframes success{
+  0%{  width:10%; height:10%;   }
+  100%{ width:50%; height:50%; }
+}
+div#SuccessDialog img{
+    transition-duration:2s;
+    width:50%;
+    height:50%;
+    animation-name:success;
+    animation-duration:0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    background-color: transparent;
+    
+
+ 
+}
+
+div#SuccessDialog p.success{
+    font-family: Lucida Sans Unicode;
+    font-weight:bold;
+    font-size:1.5vw;
+    color:green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (orientation:portrait)
+{
+
+    div#confirmPage table{
+        width:90%;
+    }
+    div#confirmPage table td{
+        padding:0.5em;
+        font-size:2vh;
+    }
+    div#confirmPage button#buynowbtn{ font-size: 2.5vh;}
+    div#confirmPage div#loadingbar svg{
+        font-size:3vh;
+    }
+
+
+    div#SuccessDialog{
+        top:30%;
+        width:30vh;
+        height:30vh;
+    }
+    div#SuccessDialog p.success{
+        font-size:2.7vh;
+    }
+}

@@ -1,0 +1,7 @@
+@import '../config.css';
+div#advertisement{
+    background-color:var(--background1);
+    width:500px;
+    height:300px;
+    border:1px solid black;
+}

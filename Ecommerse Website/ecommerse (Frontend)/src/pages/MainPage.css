@@ -1,0 +1,17 @@
+@import '../config.css';
+div#MainPage{
+    background-color: var(--background1);
+    
+}
+
+div#MainPage div#ads
+{
+     padding-top: 50px;
+}
+
+div#adscontainer{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 3%;
+}
